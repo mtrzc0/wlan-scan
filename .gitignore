@@ -1,3 +1,7 @@
+# ESP IDF
+build/
+sdkconfig*
+
 # Prerequisites
 *.d
 
