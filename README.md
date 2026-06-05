@@ -1,8 +1,8 @@
-# WLAN-scan
+# WLAN-scan project
 
 Wi-Fi scanner project for the **ESP32-WROOM** module utilizing the official **Espressif IoT Development Framework (ESP-IDF)**.
 
-## Architecture & Flow
+## Architecture
 
 1. **NVS Initialization:** The Wi-Fi driver relies on Non-Volatile Storage (NVS) to load internal RF calibration parameters and save state configurations.
 2. **Netif Initialization:** Configures the underlying network interface and initializes the Espressif TCP/IP stack instance.
@@ -13,7 +13,7 @@ Wi-Fi scanner project for the **ESP32-WROOM** module utilizing the official **Es
 
 ---
 
-## Detailed Data Structure Breakdown
+## Data Structure 
 
 The system relies on parsing the structural telemetry elements provided inside Espressif's native `wifi_ap_record_t` array buffer:
 
@@ -45,11 +45,11 @@ The source files in this repository require implementation for the following seg
 
 ---
 
-## Toolchain Compilation and Execution
+## Toolchain
 
-Before executing, make sure your terminal environment is initialized with the required Espressif export scripts (`. ./export.sh` or `export.bat`).
+Make sure that you are using latest version of the ESP-IDF toolchain. Follow installation and initialization procecure on official Espressif webpage.
 
-### 1. Set the Hardware Architecture Target
+### Hardware Architecture Target
 Configure the project target exclusively for the classic ESP32 architecture powering your ESP32-WROOM system module variant:
 ```bash
 idf.py set-target esp32
