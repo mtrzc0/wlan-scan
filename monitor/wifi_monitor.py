@@ -146,7 +146,6 @@ def build_table() -> Table:
     table.add_column("Signal", justify="center", width=6)
     table.add_column("CHAN", justify="center", width=5)
     table.add_column("AUTH", style="cyan", width=14)
-    table.add_column("Time", justify="right", width=9)
 
     for ap in aps:
         style = rssi_style(ap["rssi"])
@@ -157,7 +156,6 @@ def build_table() -> Table:
             Text(rssi_bar(ap["rssi"]), style=style),
             str(ap["chan"]),
             ap["auth"],
-            ap["seen"],
         )
     
     return table
@@ -192,7 +190,7 @@ def serial_reader(port: str, baud: int, stop_event: threading.Event):
                         with lock:
                             access_points[ap["bssid"]] = ap
                             status_text = Text(
-                                f"Last scan: {ap['seen']} | Networks: {len(access_points)}",
+                                f"Last scan: {ap['seen']} | Networks: {len(access_points)} | Band: 2.4 GHz",
                                 style="green"
                             )
         except serial.SerialException as e:
