@@ -1,4 +1,4 @@
-# WLAN-scan project & ESP32 Wi-Fi Scanner Monitor
+# WLAN-scan project
 
 Wi-Fi scanner project for the **ESP32-WROOM** module utilizing the official **Espressif IoT Development Framework (ESP-IDF)**, paired with an independent Python script for monitoring ESP32 Wi-Fi scan results over a serial port.
 
