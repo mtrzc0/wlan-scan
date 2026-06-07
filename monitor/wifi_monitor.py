@@ -124,8 +124,7 @@ def build_table() -> Table:
 
     Reads access_points and status_text from shared state under the lock.
     Rows are sorted by RSSI in descending order (strongest signal first).
-    Each row includes SSID, BSSID, RSSI value, signal bar, channel, auth type,
-    and the timestamp of when the network was last seen.
+    Each row includes SSID, BSSID, RSSI value, signal bar, channel, and auth type.
 
     Returns:
         A fully constructed rich.table.Table ready to be rendered by Live
